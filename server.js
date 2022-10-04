@@ -92,6 +92,6 @@ setInterval(() => {
 app.use(express.static('public'));
 
 // Start http listener
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 httpServer.listen(port);
 console.info(`Server running! Please visit http://localhost:${port}`);
