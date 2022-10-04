@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const { createServer } = require('http');
+const { createServer } = require('https');
 const { Server } = require('socket.io');
 const { TikTokConnectionWrapper, getGlobalConnectionCount } = require('./connectionWrapper');
 const { clientBlocked } = require('./limiter');
@@ -92,6 +92,6 @@ setInterval(() => {
 app.use(express.static('public'));
 
 // Start http listener
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 httpServer.listen(port);
 console.info(`Server running! Please visit http://localhost:${port}`);
